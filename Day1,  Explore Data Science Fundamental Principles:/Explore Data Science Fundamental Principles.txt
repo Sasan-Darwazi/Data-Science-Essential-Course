@@ -1,0 +1,71 @@
+
+Explore Data Science Fundamental Principles:
+
+
+Data can be a powerful source of inspiration, insight, and improved decision-making. To use data correctly, however, requires balancing any observations from your data with an understanding of the limitations of your data. Skilled data scientists can extract accurate information from their data by considering several important considerations. 
+
+In this module, you will develop an understanding of several key principles needed for making decisions based on data. First, you will work to recognize when you can make generalizations about your data and why it is crucial to be cautious when doing so. Second, when you find associations in your data, it does not always mean you have discovered a cause. Still, you will practice identifying and accounting for factors that make it more likely you will uncover real relationships. Finally, you will develop an appreciation for the randomness inherent in any experiment and understand how statistics can help you account for uncertainty.
+
+
+Using Data To Make a Decision:
+
+Data-driven decision-making is critical in many fields, including business and science. In this video, Professor Basu introduces you to using data science concepts to make informed decisions. He also describes several key points you should be aware of when making decisions based on data, including generalizing your conclusions, interpreting association as causation, and assessing uncertainty around your results.
+
+Generalization: When you invest around 20 stores and receive profit only from five stores and sales.
+
+Association as Causation: When you get a promotion, could your promotion increase the sales and profits of your company?
+
+Uncertainty: How could we be sure about a spike in sales, should it be 100% sure? should it be 80% or less regarding the spikes in sales in profits?
+
+
+
+Making Generalizations from Data:
+
+When you make a discovery in some members of a group but want to extrapolate your conclusion to the whole group, you need to generalize. Making generalizations can be extremely useful, but it also comes with some risks. Here, Professor Basu explains several issues you may encounter as you try to generalize your conclusions. He also suggests strategies to avoid those issues, such as selecting a random sample.
+
+
+To guard against the risk of generalizations, we need to observe three points:
+
+1: The unit of Observation: it's only the single store among your stores.
+E.G.: When you give a promotion to an employee, you're gathering all the details from the employees in 20 units, called the population.
+
+2: Second is the population to generalize your conclusion. The whole number of your stores.
+3: Sample of the stores where you want to promote your promotion to that specific employee.
+E.G.: Only five stores.
+
+Note: Once you selected the samples from your stores, ask a question yourself, is the sample data collected representative of the population?
+
+
+To ensure the representative of our simple, we normally follow two principles:
+1: Randomization, 2: Stratification
+
+1: In randomization when you're selecting data from your stores, you start selecting randomly from the nationwide not from your ideal store.
+
+2: Stratification, is used when the population has different groups, in Data Science it's called a block.
+These are different groups with different types of units. In such situations, we take one simple random sample from each block but make sure that the sample size is proportional to the size of the block. This is called stratified random sampling.
+
+
+
+Accounting for Confounder Variables:
+
+A data scientist’s primary goal is to identify what causes particular outcomes, but this can be extremely challenging. How can you use the associations you find in your data set to make a strong case that you’ve identified the cause of an outcome? As Professor Basu explains in this video, one way to strengthen your evidence for a causal claim is to account for confounding factors — variables that influence one group more than another, thus altering the outcome of a study.
+
+, Confounders are variables that could give one of the groups treatment or control somewhat higher exposure to disease, and that's how we skew the result. 
+s
+Confounders Factors: It allows us to account for both observed and unobserved confounders systematically.
+
+Using Randomized Experiments to Make Causal Claims:
+
+If you plan an experiment with confounding factors in mind, you can use sampling strategies to account for those confounding factors. However, when you do an observational study, you need to make assumptions about how confounding factors affected the treatment groups. In this video, Professor Basu discusses blocked (stratified) and randomized sampling strategies that you can use when designing an experiment, as well as the type of assumptions you must arrive at to make causal claims based on data from an observational study.
+
+To explain this vividly, This risk status can affect them to respond differently to the new treatment. This could be an example of an observed confounder, that we know who is high risk and who is in the low-risk group. If we randomly split this big pool of patients into two groups, it may be possible that there are mostly high-risk patients in treatment and mostly low-risk patients in control. That can skew the result of your study. Instead, what we do is we go about it more systematically. First, we divide the pool into two blocks of subgroups based on this observed confounder, which is the low and high-risk status. We create one pool of patients which is entirely high-risk patients and another pool of entirely low-risk patients. This process is called blocking. Now within each block, we randomly select half of the patients and assign them to treatment, and keep the other half to the control group. We do this randomization to deal with possible unobserved confounders like pre-existing conditions or genetic makeups of patients. 
+
+
+The importance of Uncertainty:
+
+Once you’ve collected your data, determined that you can generalize it to a larger population, and accounted for confounding factors, you might be tempted to decide that your results are conclusive. Yet you also need to account for the uncertainty and randomness present in the results of your study. 
+
+
+
+ 
+
