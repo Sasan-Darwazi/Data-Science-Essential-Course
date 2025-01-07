@@ -1,0 +1,103 @@
+Module Introduction: Manipulate, Create, and Group Variable.
+
+
+Before you use a data set to answer a specific question, you should set yourself up for success by organizing the data efficiently. This can include removing variables you don’t need, omitting observations that don’t apply to the problem at hand, and creating new variables from the data available to you. Additionally, by working closely with your data, you can clarify your expectations and ensure you’re asking the right questions correctly.
+
+In this module, you’ll begin using the tidyverse — a set of R packages specific to data science — to manipulate and clean a data set that contains information on customer use of credit cards. First, you’ll remove unnecessary observations and variables that aren’t important. Then, by transforming variables, you will change your data into forms that are more suited to your analysis. Finally, to develop preliminary conclusions about your data, you’ll group and summarize key variables in a way that will help you reveal important patterns and trends. 
+
+
+R Packages and the Tidyverse
+
+An R package is a collection of functions and data sets stored in a well-defined format. R comes with a standard set of packages, called base R, that is automatically installed when you download R. Base R packages load automatically whenever you open R. You can also manually download and install many other R packages on your computer. Using packages that aren't part of base R greatly expands what you can do with R, making it an exceptionally powerful and flexible tool.
+
+The tidyverse
+The tidyverse is a set of packages made specifically for data scientists. In this course, you will use some of the capabilities provided by packages in the tidyverse to manipulate, clean, and visualize data. All of the packages in the tidyverse use the same underlying philosophy to guide how they handle large data sets, which makes it easier to analyze your data sets consistently. 
+
+
+
+Manipulating Data:
+
+A clean, organized house makes it much easier to find your belongings. A clean, organized data set has the same effect by making it much easier to find answers to your questions. Here, Professor Karpman explains how cleaning your data set can be helpful and how you can do so with the tidyverse. She also introduces the Credit data set that you’ll manipulate throughout this module.
+
+
+Filtering Data
+
+If you’re interested in understanding how students use credit cards, data on how non-students use credit cards isn’t helpful. Paring down a large data set into a smaller data set that only contains the observations of interest will increase the efficiency of your analysis. In this video, Professor Karpman introduces the filter() function that you can use to exclude unnecessary observations from your data set.
+
+
+Selecting Variables:
+
+Have you ever noticed how much information you provide when you purchase on a website? Many companies collect a variety of data that might include customer location, spending, and website activity. Yet data scientists at those companies probably don’t use all of that data for every question they answer. As Professor Karpman explains in this video, you can keep the variables you need in your data set and avoid clutter by getting rid of unnecessary variables with the select() function.
+
+Practice:
+
+summary(cars)
+library(tidyverse)
+
+
+Credit <- read.csv("credit_cards.csv")
+
+
+Yes <- filter(Credit, Student == "Yes")
+Noo <- filter(Credit, Student == "No")
+
+
+Balance <- filter(Credit, Balance >= 0)
+
+filter(Credit, Student == "Yes" | Education >= 13)
+
+
+select(Credit, -ID)
+
+Credit1 <- select(Credit, -c(ID, Student))
+
+
+
+
+Transforming and Combining Variables
+
+It isn’t always possible or efficient to collect data in the exact form any future analysis might require. This means you may need to alter some of your data to make it easier to analyze. Data scientists call this transforming or combining data; in this video, Professor Karpman explains how to do this with the mutate() function.
+
+
+Combining Transformations Efficiently With Pipe Operators
+
+Manipulating data can be time-consuming, and, as you’ve seen, you have many options. You could create a new data set for each manipulation, but that would quickly become tedious. You should instead use the pipe operator to combine several transformations into one process, as Professor Karpman demonstrates in this video. 
+
+
+Practice:
+
+library(tidyverse)
+
+Credit <- read.csv("credit_cards.csv")
+
+
+
+mutate(Credit, HighEdu = Education >= 13)
+mutate(Credit, SqrtLimit = sqrt(Limit))
+
+mutate(Credit, HighEdu = Education>= 13, SqrtLimit = sqrt(Limit))
+
+Credit %>%
+  filter(Student == "Yes")%>%
+  mutate(LimitPerc = Limit/(Income*10000), HighEdu = Education >=13)
+
+
+
+Summarizing and Grouping Data
+
+On its own, cleaning and manipulating your data is worthwhile because it will make your analysis easier. Another benefit of this process is that it gives you the opportunity to examine the underlying patterns in your data, which can help you ask the right questions in the right way. Here, Professor Karpman demonstrates how to use the group_by() and summarise() functions to create tabular summaries of your data set. 
+
+library(tidyverse)
+library(utf8)
+library(ellipsis)
+
+Credit <- read.csv("credit_cards.csv")
+
+
+Credit %>% group_by(Student)%>%summarize(IncomeRange = max(Income)- min(Income))
+IncomeRange
+
+
+Credit %>% group_by(Student, Married)%>% summarize(MaxLimit = max(Limit))
+
+ 
