@@ -1,0 +1,35 @@
+Module 2: Visualize Your Data:
+
+A key part of data analysis is making professional plots that can help you study and convey complex data and trends. Creating these plots can be time-consuming, but the tidyverse contains a set of functions that allow you to make informative, useful, and visually pleasing plots with minimal lines of code. 
+
+In this module, you will use the tidyverse’s ggplot2 package to create high-quality visualizations of a data set that contains information on several hurricanes, tropical storms, and tropical depressions. After you create several basic plots, you’ll layer information onto those plots to create more complex graphics that convey information about many variables at once. After creating bar, line, and scatterplots, you’ll adjust their labels and create their legends. In addition, you will practice selecting and changing a wide variety of plot features, including color, transparency, and size of different aspects of a plot. Finally, you will create displays of many plots at once.
+
+Creating plots with the Tidyverse.
+The ggplot2 package in R uses a step-by-step process to create high-quality data visualizations. First, you start with the most essential components of your plot, then you alter or add to them. In this video, Professor Karpman explains how you can use functions in the ggplot2 package to build a simple scatterplot. She also introduces a new data set on storms that you’ll examine as you create plots with ggplot2. 
+
+Framework for ggplot2:
+
+This page illustrates the three main concepts you need to understand to build a plot with the ggplot() function that is part of the ggplot2 package. Professor Karpman uses these concepts as she explains how to build plots with ggplot2. Refer to this page when you need to think through how building a plot works. 
+
+Plots made with ggplot() are built in a step-by-step process. These steps are sometimes called layers. 
+You start with a layer that displays your data. 
+You can then increase the complexity of a plot or the amount of information it conveys to a viewer by adding more features, such as a trendline, in a different layer.
+The parts of your plot that display data are called geometric objects. 
+The most basic geometric objects adjust whether data is added to your plot as points, bars, lines, or another format. 
+You can also layer more complex geometric objects over your basic plot. For example, a trendline is a geometric object that you can add as a layer to a scatterplot.
+The way your plot looks is referred to as the plot’s aesthetics. In ggplot2, aesthetics are divided into two main groups. 
+Aesthetics that don’t directly influence how your data is presented, such as the font used in the title, are adjusted with the theme() function. 
+Aesthetics that influence how data is displayed are adjusted by changing the aes() function. Changes to these aesthetics can affect one, several, or all the layers of your plot.
+
+
+Themes in the ggplot2 Package:
+
+Themes can improve how your plot looks, making it easier for your viewers to interpret. In the videos in this module, Professor Karpman uses the theme() function to make the plots easier to see. You will not need to alter plot themes in this course, but as you work through the scripts in this module, you will use the various themes that Professor Karpman discusses in the videos.
+
+Why Use Themes
+You might want to use the theme() function to change how a plot made with ggplot() looks. Changes you make to a plot with the theme() function alter the way a plot appears but don't affect how the data is presented. For example, you can use the theme() function to change the font or size of labels and titles, add or remove gridlines, or change the background color of your plot. Once you've created a theme and saved it as an object, you can easily use the same theme with other plots you make, which can be a useful time-saving technique.  
+
+This page provides an overview of how to use the theme() function, with the storms data set as an example. 
+
+Default Plot Made With ggplot()
+If you don't change the theme of your plot, you will create a plot that is in the default style of ggplot. Without the theme, your code and plot would appear as follows. Notice that even though the points on this default plot are easy to see, the gridlines aren't very clear and the labels are difficult to read. 
