@@ -1,0 +1,8 @@
+So far so good!
+R, and hashtag#tidyverse packages: 
+
+A key part of data analysis is making professional plots that can help you study and convey complex data and trends. Creating these plots can be time-consuming, but the tidyverse contains a set of functions that allow you to make informative, useful, and visually pleasing plots with minimal lines of code. 
+
+You will use the tidyverse’s ggplot2 package to create high-quality visualizations of data in your data set that contains information on various topics, supposed it hurricanes, tropical storms, and tropical depressions
+
+Get through the below image, and look over there, with how to visualize your data step-by-step through the ggplot function.
