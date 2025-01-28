@@ -1,0 +1,7 @@
+Whenever you create a plot, your goal is to determine and then communicate the story of your data. At a minimum, this requires clear plot labels and titles. In this module, I will explain how to title, label, and modify your plot to ensure it conveys the message you want to send to your audience.
+
+Note:
+ The function xlab() changes the x-axis label,
+ the function ylab() changes the y-axis label, 
+ and the function ggtitle() changes the title:
+
