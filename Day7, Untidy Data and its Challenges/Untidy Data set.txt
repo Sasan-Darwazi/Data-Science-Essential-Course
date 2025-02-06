@@ -1,0 +1,70 @@
+
+Module 3: Prepare Your Data for Efficient Analysis:
+
+Data scientists often work with huge data sets that must be organized efficiently, otherwise analyzing them would be extraordinarily difficult. One of the key principles of the tidyverse is that data sets should be organized in a tidy manner. Tidy data sets are easier to manipulate, organize, and combine with other data sets.
+
+In this module, you will both tidy data sets and unlock some of the benefits of tidied data sets. First, Professor Karpman will describe tidy data and its benefits. You will then tidy several different untidy versions of the same data set. Having your data set in a tidy form makes it easier for you to join two data sets that each contain important information for your analysis, and you’ll use tidy-verse functions to join data sets together. When you work with and join large data sets, you may encounter missing data values, so you will also find and fix missing values. You’ll practice all of these skills by exploring a data set on language diversity in different countries.
+
+
+
+Untidy Data and Its Challenges
+
+You can organize a data set in different ways, but one thing that ought to remain constant is the overall format of your data, which should be tidy. A data set is tidy when it contains one observation in each row, one variable in each column, and one value in each cell. Taking the time to tidy your data set is worth the effort because it makes analysis easier in the long run. In this set of videos, Professor Karpman explains the benefits of tidy data and introduces a new data set on language diversity as she demonstrates the challenges of working with untidy data.
+
+
+Widening a Data Set
+
+A data set with many variables recorded in a single column will have more than one row for each observation. This means it will have too many rows and be too long. To fix this, you must combine all the rows associated with a single observation to make your data set shorter (i.e., fewer rows) but wider (i.e., more columns). Here, Professor Karpman demonstrates how to widen a version of the language diversity data set with the pivot_wider() function. 
+
+
+
+Lengthening a Data Set
+
+When data sets have variables disguised as measurements within a row and observations spread out across columns, they can be too wide. In this video, Professor Karpman uses the pivot_longer() function to lengthen the version of the language diversity data set that is too wide.
+
+
+Practice:
+
+Step 1: Load your data:
+library(tidyverse)
+
+langDivLengthen <- read.csv("language_diversity_pl.csv") 
+langDivWiden <- read.csv("language_diversity_pw.csv") 
+`	  
+
+
+Joining Related Data Sets
+
+Sometimes you may need to combine two or more data sets to obtain all the information you need to answer a particular question. Data scientists call this joining data, and the tidyverse contains several functions to facilitate this process. One important thing to consider when you join data is which variable you want to "match up" in the two data sets. Here, Professor Karpman demonstrates several ways to join two data sets, using the language diversity data set and another data set on GDP (gross domestic product). 
+
+Practice:
+
+Step 1: Load your data.
+library(tidyverse)
+
+langDiv <- read.csv("langDiv.csv") 
+head(langDiv)
+
+gdp <- read.csv("country_gdp_data.csv", header = TRUE)
+head(gdp)
+
+
+Step 2: Keep all rows and columns.
+Use the full_join() function if you want to keep all of the rows and columns from both data sets when you combine them. When you join two data sets, you need to join them by a variable that is in both data sets. In this case, we want to use the variable Country, so we include the argument by = "Country".
+
+full_join(x = langDiv, y = gdp, by = "Country")
+
+
+
+Step 3: Keep all data from the rightmost data set.
+Use the right_join() function to keep all data from the rightmost data set. The rightmost data set is the one referred to with the argument y. If you don't include the arguments x and y, R will assume the one on the right is y.
+
+In this example, all the data from the gdp data set is kept. 
+
+right_join(x = langDiv, y = gdp, by = "Country")
+
+
+Step 4: Keep only data that occurs in both data sets.
+Use the inner_join() function to keep only data that is present in the joined variable in both data sets. 
+
+inner_join(x = langDiv, y = gdp, by = "Country")
