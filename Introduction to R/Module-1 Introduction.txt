@@ -1,0 +1,64 @@
+Module-1 Introduction:
+Use the Building Blocks of R:
+
+The statistical programming language R is used by data scientists across the globe. RStudio is another tool that interacts with R to create a user-friendly workspace. R is popular because you can use it for many different tasks, like analyzing data and creating graphs. R and RStudio are both open-source programs, so you can access them for free. This facilitates collaboration among data scientists because if you write code and choose to share it with others, they will be able to see what you did and how you did it. 
+
+In this module, you will explore R and the RStudio workspace. In addition, you will practice the fundamental components of R throughout this module. By practicing the basics of R, you will develop the ability to read, write, and combine different aspects of the R programming language. This will help you build up the skills that will allow you to use R for more complex tasks. 
+
+
+What is R?
+
+You may already know that R is an open-source statistical programming language that many data scientists use. So what does that mean, exactly?
+
+R is an interpreted programming language, which means you interact with it by typing a set of instructions, known as code. R then carries out the commands contained in your code. Commands can be as simple as 2 + 3. Alternatively, they can be complex enough to perform advanced statistics on enormous data sets or create publication-quality graphs. You can type code directly into R, but one thing that makes R so powerful is that it contains many pre-built commands that you can use to accomplish a huge variety of tasks. These pre-built commands are called functions.
+
+Programming languages like R can make data analysis more efficient than other software like Microsoft Excel because you can save a set of commands, along with the results of any data analysis you perform, and reuse your results or code later. 
+
+R and RStudio
+You can use R on its own, but many data analysts prefer to use R within an integrated development environment (IDE) because IDEs make it easier to interact with code, data, and graphics all at once. RStudio is a popular IDE to use with R, and you'll use it in this course. RStudio is an open-source program just like R, so if you download both programs onto your computer, you'll be able to use them whenever you want.
+
+How will you use R in this course?
+The best way to learn how to use R and write code is to practice. In this course, you'll practice R by writing your own code, working with and modifying real data, and using functions to analyze data and create graphs. More specifically:
+
+After many of the videos, you will do an ungraded practice activity followed by a quiz that will let you show off your new skills.
+After each module, you will complete part of the course project that will require you to use and combine the skills you acquired in that module.
+The activity, quiz, and project pages in this course each have an RStudio workspace that has been set up for you individually. You can use these workspaces to practice writing code and come back to them as you work through the course. Only you and your facilitator have access to these workspaces. 
+
+
+
+Using R as a Calculator
+While you don't need to use R to add 2 and 3 together, one of the most intuitive ways to start using R is to use it as a calculator. Here, Dr. Entner demonstrates how to use R as a calculator. He also demonstrates some qualities of R, such as the ability to group numbers, that can make R more efficient to use than a calculator. 
+
+#Using R a Calculator:
+
+#Add and substract numbers:
+
+1 + 2
+
+# Multiply and divide numbers:
+
+1 * 2
+1 / 2
+
+#Calculate exponents:
+
+2 ** 3
+2 ^ 3
+
+#Use parentheses to indicate order
+#of operation:
+(5*2 + 4) / 7
+5 * 2 + 4 / 7
+
+#Type a vector and add or multiply numbers with vectors:
+
+c(1,2,3,4)
+
+c(1,2,3,4)+1
+
+c(1,2,3,4,5)*2
+
+
+#Add and divide one vector by anther vector:
+c(1,2,3,4) + c(0,2,7,-10)
+c(1,2,3,4) / c(1,2,3,4)
