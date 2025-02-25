@@ -1,0 +1,41 @@
+Using Functions
+One of the main benefits of using R is that you can access a huge variety of functions, which are sets of commands that perform a particular action. Some functions, for example, can find the maximum value in a vector, while some can carry out complex statistical analyses. 
+
+Function:
+Functions are one of the main building blocks of R, and understanding how to use functions will help you unlock a whole host of possibilities for writing code and analyzing data.
+
+#Using Function:
+
+KODK <- c(21.00, 24.00, 23.10, 24.75, 26.50, 25.50)
+
+#Find a maximum value
+max(KODK)
+maxKODK <- max(KODK)
+
+#Find a minimum value
+min(KODK)
+minKODK <- min(KODK)
+
+#Find a mean value:
+ave <- mean(KODK)
+ave
+
+
+#Find the length of you data
+n <- length(KODK)
+n
+
+
+Writing a Script
+You get immediate results when you run commands in the R console. If you wanted to reuse those same commands later, however, you would need to type them into the console again, which can be tedious at best and inaccurate at worst. 
+
+
+#Writing a Script
+
+#Add a text to your script
+x <- c(1,2,3,4,5,6)
+y <- sample(x, size = 3)
+maxy <- max(y)
+miny <- min(y)
+diff <- maxy - miny
+diff

@@ -1,0 +1,36 @@
+Assigning and Modifying Variables
+When you analyze data in R, it is critical to be able to store the data so you can reference it later or use it in a future analysis. You will also need to know how to modify data that you previously stored.
+
+Assigning Variables
+Here, Dr. Entner demonstrates how to store data by assigning it to a variable along with how you can see and use the data you've assigned to variables. Variable names you create can consist of uppercase or lowercase letters, numbers, periods, and underscores, but they can't start with a number.
+
+#Assigning and Modifying Variables
+
+#Create a vector called Ex1.
+Ex1 <- c(1,2,3,4)
+
+#Add a value to a numeric vector.
+Ex1 + 1
+
+#Assign a name to a variable plus a value.
+add_one <- Ex1
+
+
+#Assign a name to a character vector.
+Survey <- c("Y","N","N")
+
+
+#Check whether the variable you created is equal to another variable.
+Survey == c("Y","N","Y")
+
+
+
+Modifying Vectors
+Sometimes you might need to change one particular data value in a vector, whether it was entered incorrectly to begin with or just needs to be updated.
+
+#Change a component of a vector.
+x <- c(1,2,3,4,99,6)
+
+x[5] <- 100
+head(x)
+x[5] <- 5
