@@ -1,0 +1,10 @@
+Module 2: Manipulating Data in R:
+
+
+When data are collected, they are often not in a form that allows for easy analysis. That means you have to manipulate or change the form of the data. You may also need to correct errors in the data. R offers many tools for data manipulation. For example, you can create your own data sets or import data that you have collected and now want to analyze. Understanding the basics of data manipulation in R will allow you to examine and interact with your data so you can gain insights to answer key questions or direct further analysis.  
+
+In this module, you will work with two types of data structures — matrices and data frames — that you can use to combine variables associated with observations of an individual or unit into one place in R. You'll build matrices from vectors and import data frames from a data file. Once you've created a matrix or data frame, you'll alter its data points, create new columns, and make smaller groups from the data set. Finally, you'll practice moving your altered data set out of R so that you can save or share the new data set. 
+
+Creating a Matrix
+
+Being organized always makes finding an item or completing a task easier, and working with data is no exception. When you work with multiple data sets, it can be helpful to store those data sets in one place. One way to do that in R is to create a matrix, which is a two-dimensional rectangle of data elements of the same type. 
