@@ -1,0 +1,9 @@
+Matrices and Data Frames are very significant for your analysis through R. Thereafter, have a glimpse at the pictures below to see the light.
+
+
+
+When you work with multiple data sets, it can be helpful to store them in one place. One way to do that in R is to create a matrix, a two-dimensional rectangle of data elements of the same type.
+
+
+
+A data frame is a two-dimensional table of data that is similar to a matrix. Yet data frames can contain multiple types of data, making them more flexible than matrices. When you import data as a data frame, R automatically characterizes your data into types and creates a summary in the Environment pane of RStudio on the right side of RStudio, as shown in the miniature. This summary contains information on the name of each column and the type of data it contains.
