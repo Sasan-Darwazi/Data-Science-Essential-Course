@@ -1,0 +1,8 @@
+Module 3: Making a Plot in R:
+
+Your ultimate goals when working with a data set are to determine the story it's telling you and find the best approach to communicate that story to others. Data visualizations are critical to achieving these goals, and R has many features for building customizable plots that can highlight patterns and trends in your data in a clear, visible manner. 
+
+In this module, you will create plots that enable you to examine the relationship between two factors and to investigate trends in one or more factors over time. Using various functions in R, you will customize those plots by changing their characteristics, such as the line or point types, and add legends that indicate what those plot characteristics represent. Finally, you will display multiple plots on one graph and practice saving the plots you create as image files that you can embed in documents and share with others. 
+
+Labeling Scatterplots and Adjusting Point Types
+The details of your plot influence how well it conveys information, so it is important to customize the characteristics of the plots you create. For example, you should always label your plots so that you and others know what information it is meant to convey. You can do this in R by adding several arguments to specify the axis labels and title. Additionally, you may want to use the cex argument to change the size of the points to make them easier to see. 
