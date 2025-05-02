@@ -1,0 +1,13 @@
+Making and Customizing Line Plots
+Data scientists often want to compare how two different data sets change over the same period. A useful tool for examining one or more data sets over time is a line plot, which you can make by connecting the points in a scatterplot with a line, as Dr. Entner explains here. This can make it easier to see and compare trends. 
+
+
+
+Making a Line Plot
+I am to show the trends of both Apple and Netflix stock prices over time. As he demonstrates, the first line is drawn by adding the argument type = "l" to the same plot() function you've used to make a scatterplot. The second line is added to the existing plot with the lines() function.
+
+
+NFLX_2005$Date <- as.Date(NFLX_2005$Date)
+plot(NFLX_2005$Date, NFLX_2005$Open, type = "l", main = "Netflix, Apple Opening Stock-Prices")
+AAPL.2005$Date <- as.Date(AAPL.2005$Date, )
+lines(AAPL.2005$Date, AAPL.2005$Open, col = "red", cex = 1)
